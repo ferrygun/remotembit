@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+
+  <script src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js" id="sap-ui-bootstrap" data-sap-ui-libs="sap.m" data-sap-ui-resourceroots='{"view": "./"}' data-sap-ui-theme="sap_bluecrystal" data-sap-ui-xx-bindingSyntax="complex">
+  </script>
+  <!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+  <!-- by Denise Nepraunig @denisenepraunig -->
+  
+  <!-- example for a SAPUI5 MVC XML view with JSON data from a file
+       and data binding based on the demokit example from sapui5:
+       https://sapui5.netweaver.ondemand.com/sdk/explored.html#/entity/sap.m.Table/samples
+       -->
+
+  <script>
+    // Best practice would be to set this stuff up in an Component.js
+    // but let's not over-complicate stuff for demonstration purposes
+    
+    sap.ui.localResources("view");
+    var app = new sap.m.App({
+      initialPage: "idMain"
+    });
+    var page = sap.ui.view({
+      id: "idMain",
+      viewName: "view.Main",
+      type: sap.ui.core.mvc.ViewType.XML
+    });
+    app.addPage(page);
+    app.placeAt("content");
+  </script>
+
+</head>
+
+<body class="sapUiBody" role="application">
+  <div id="content"></div>
+</body>
+
+</html>
