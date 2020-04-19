@@ -1,0 +1,39 @@
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Receiver</title>
+  <script language="javascript" type="text/javascript" src="microBit.js"></script>
+  <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.min.js"></script>
+
+  <!-- uncomment lines below to include extra p5 libraries -->
+  <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+
+  <!-- this line removes any default padding and style. you might only need one of these values set. -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+    micro:bit
+  </h1>
+
+    <button id="searchButton" onClick="searchDevice()">Search Device</button>
+
+    <div id="properties" class="properties inactive">
+
+      <div class="property">
+        Connected: <span id="connected" class="value"></span>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
