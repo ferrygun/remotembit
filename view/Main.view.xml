@@ -1,0 +1,36 @@
+<mvc:View
+  height="100%"
+  controllerName="view.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:form="sap.ui.layout.form"
+  xmlns:l="sap.ui.layout"
+  xmlns="sap.m">
+  <Page
+    title="Page"
+    class="marginBoxContent" >
+    <customHeader>
+      <Toolbar>
+        <ToolbarSpacer/>
+        <Label text="Send Message" />
+        <ToolbarSpacer/>
+      </Toolbar>
+    </customHeader>
+    
+    <content>
+      	<l:VerticalLayout class="sapUiContentPadding" width="100%">
+        <form:SimpleForm 
+				editable="true"
+				layout="ResponsiveGridLayout" >
+				<Label text="Message" />
+				<TextArea id="msg" value="" growing="true" height="100%" width="100%"/>
+			</form:SimpleForm>
+     </l:VerticalLayout>
+    </content>
+    <footer>
+      <Toolbar>
+        <ToolbarSpacer/>
+        <Button type="Emphasized" text="Send" press="onPress" />
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>
